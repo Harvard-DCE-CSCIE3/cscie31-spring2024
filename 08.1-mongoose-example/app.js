@@ -28,8 +28,8 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PWD}@clu
       let characters = await Character.find({});
       console.log(`found characters! ${characters}`);
 
-      let r = await c.deleteOne();
-      console.log(`deleted one ${r}`);  
+      //let r = await c.deleteOne();
+      //console.log(`deleted one ${r}`);  
     }catch(err){
       console.log(err);
     } 

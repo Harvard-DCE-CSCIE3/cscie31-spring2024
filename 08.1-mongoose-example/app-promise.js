@@ -1,9 +1,6 @@
 //app-promise.js
 const mongoose = require("mongoose");
 
-// Use ES6 native Promises as promise library
-mongoose.Promise = global.Promise;
-
 // Connect to mongoDB on MongoDB Atlas
 mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PWD}@cluster0.njksd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
   .then(()=>{

@@ -1,11 +1,8 @@
 //app-asyncawait.js
 const mongoose = require("mongoose");
 
-// Use ES6 native Promises as promise library
-mongoose.Promise = global.Promise;
-
 // Connect to mongoDB on MongoDB Atlas
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PWD}@cluster0.njksd.mongodb.net/test?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PWD}@cluster0.njksd.mongodb.net/test?retryWrites=true&w=majority`)
   /* To use the async/await construct, the function that encloses our asychronous
    *  'await' calls must be preceded by the 'async' keyword. In this case, it was
    *  necessary to use the Promise returned by mongoose.connect() to create function
