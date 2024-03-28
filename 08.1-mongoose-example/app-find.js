@@ -11,7 +11,7 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PWD}@clu
       story: {type: String, required:false}
     });
     var Character = mongoose.model('Character', characterSchema);
-
+    // The Ghastly Ordeal of Timothy Cavendish
     // Here we use find() with a regular expression seach on the story field
     let characters = await Character.find({story: /ghastly/i})
       .sort("-name")

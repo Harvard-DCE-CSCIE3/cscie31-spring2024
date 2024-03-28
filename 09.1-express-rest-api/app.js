@@ -6,8 +6,9 @@ const bodyparser = require('body-parser');
 const apiphotos = require('./routes/api/api.photos');
 const mongoose = require('mongoose');
 
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PWD}@cluster0.njksd.mongodb.net/cscie31?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true})  
-.catch((err)=>{
+mongoose.set('strictQuery', true);
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PWD}@cluster0.njksd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)  
+  .catch((err)=>{
     console.error(`database connection error: ${err}`);
     process.exit();
   });
