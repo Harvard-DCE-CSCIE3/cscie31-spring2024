@@ -1,3 +1,4 @@
+import 'zone.js'; // boilerplate req'd for running in some environments (e.g. stackblitz)
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
